@@ -1,7 +1,11 @@
-import '../styles/globals.css'
+import Layout from "../components/Layout";
+import "../styles/globals.css";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+  // pageProps : 서버사이드props에서 던진 props를 받는다
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
-
-export default MyApp
